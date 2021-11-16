@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulaire</title>
+  </head>
+  <body>
+     
+    <form method="post" action="form.php">
+      <fieldset>
+        <legend>Informations personnelles</legend>
+        <div class="champ">
+          <label for="nom">Nom de famille:</label>
+          <input type="text" id="nom" name="nom" minlength="2 maxlength="25 required/>
+        </div>
+        <div class="champ">
+          <label for="prenom">Prenom:</label>
+          <input type="text" id="prenom" name="prenom" minlength="2 maxlength="25 required />
+        </div>
+        <div class="champ">
+          <label for="mail">Adresse mail:</label>
+          <input type="email" id="mail" name="mail" required/>
+        </div>
+        <div class="champ">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="16" max="99"/>
+        </div>
+        <div class="champ">
+          <input type="radio" id="h" name="sexe" value="homme" />
+          <label for="h">Homme</label>
+          <input type="radio" id="f" name="sexe" value="femme" />
+          <label for="f">Femme</label>
+        </div>
+        <div class="champ">
+          <label for="pays">Pays de résidence:</label>
+          <select id="pays" name="pays">
+            <optgroup label="Europe">
+              <option value="france">France</option>
+              <option value="belgique">Belgique</option>
+              <option value="suisse">Suisse</option>
+            </optgroup>
+            <optgroup label="afrique">
+              <option value="algerie">Algérie</option>
+              <option value="tunisie">Tunisie</option>
+              <option value="maroc">Maroc</option>
+              <option value="madagascar">Madagascar</option>
+              <option value="benin">Bénin</option>
+              <option value="togo">Togo</option>
+            </optgroup>
+            <optgroup label="amerique">
+              <option value="canada">Canada</option>
+            </optgroup>
+            <fieldset>
+              <legend>Compétences / expériences :</legend>
+              <div class="champ">
+                  <textarea name="exp" placeholder="Vos experiences pro" maxlength="500"></textarea>
+                <input
+                  type="checkbox"
+                  id="html"
+                  name="competences"
+                  value="html"
+                />
+                <label for="html">HTML</label>
+                <input
+                  type="checkbox"
+                  id="css"
+                  name="competences"
+                  value="css"
+                />
+                <label for="css">CSS</label>
+                <input
+                  type="checkbox"
+                  id="javascript"
+                  name="competences"
+                  value="javascript"
+                />
+                <label for="javascript">JavaScript</label>
+                <input
+                  type="checkbox"
+                  id="php"
+                  name="competences"
+                  value="php"
+                />
+                <label for="php">PHP</label>
+                <input
+                  type="checkbox"
+                  id="sql"
+                  name="competences"
+                  value="sql"
+                />
+                <label for="sql">SQL</label>
+                <input type="checkbox" id="sql" name="competences" value="sql"
+              </div>
+              <div class="champ">
+                <textarea
+                  name="exp"
+                  placeholder="Décrivez une experience pro"
+                ></textarea>
+              </div>
+              <fieldset>
+                <legend>Validation:</legend>
+                <div class="champ">
+                  <label for="pass">Choisissez un mot de passe</label>
+                  <input type="password" minlength="8" required/>
+                </div>
+                <input type="submit" value="Envoyez" />
+              </fieldset>
+            </fieldset>
+         
+      
+     
+    </form>
+  </body>
+</html>
